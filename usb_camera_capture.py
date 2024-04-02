@@ -17,14 +17,15 @@ while camera.isOpened():
     ret, frame = camera.read()
 
     # Create scale bar (based on calculations)
-    frame[30:35, 30:209, :] = 0
-    frame[30:38, 30:33, :] = 0
-    frame[30:38, 209:212, :] = 0
+    frame[50:55, 30:209, :] = 0
+    frame[50:62, 30:33, :] = 0
+    frame[50:62, 209:212, :] = 0
+    frame[50:59, 118:121, :] = 0
     
     # Add text
     font = cv2.FONT_HERSHEY_SIMPLEX 
-    origin = (100, 20) 
-    fontScale = 0.6 
+    origin = (40, 45) 
+    fontScale = 1.6
     color = (0, 0, 0)
     thickness = 2
     image = cv2.putText(frame, '20 um', origin, font,  
